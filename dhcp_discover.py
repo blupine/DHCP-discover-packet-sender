@@ -3,9 +3,9 @@ from scapy.all import *
 conf.checkIPaddr=False
 
 # configuration
-localiface = 'eth1'			#your NIC name (ex)eth0, Wi-Fi)
-requestMAC = ''				# your NIC address - MAC address
-myhostname=''				#your desktop name - ex) DESKTOP-XXXXXX
+localiface = 'eth1'              # your NIC name (ex)eth0, Wi-Fi)
+requestMAC = ''                  # your NIC address - MAC address
+myhostname=''                    # your desktop name - ex) DESKTOP-XXXXXX
 localMAC = get_if_hwaddr(localiface)
 requestMAC = requestMAC.replace(':','').decode('hex')
 
