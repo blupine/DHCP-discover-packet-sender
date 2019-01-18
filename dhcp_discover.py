@@ -9,7 +9,7 @@ myhostname=''				#your desktop name - ex) DESKTOP-XXXXXX
 localMAC = get_if_hwaddr(localiface)
 requestMAC = requestMAC.replace(':','').decode('hex')
 
-# craft DHCP DISCOVER packet
+# create DHCP DISCOVER packet
 ehter = Ether(src=localMAC, dst='ff:ff:ff:ff:ff:ff')
 ip = IP(src='0.0.0.0', dst='255.255.255.255', ttl=128)
 protocol = UDP(dport=67, sport=68)
